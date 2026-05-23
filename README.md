@@ -44,7 +44,7 @@ mlk-portfolio/
 | 4 | **Skills** | 6 categorised skill cards with tech pills |
 | 5 | **Certifications** | 12 professional certifications |
 | 6 | **Fellowships & Awards** | Afrika Kommt! AK11, OYW Ambassador, Perplexity Fellowship, ForbesBLK |
-| 7 | **Education** | Johns Hopkins University & Saint Monica University |
+| 7 | **Education** | The University of Salford, Saint Monica University & Institute of Advanced Management and Technology - Now (UNIMTECH) |
 | 8 | **Contact** | LinkedIn, email, phone, and CTA card |
 
 ---
@@ -92,7 +92,7 @@ All content lives in `index.html`. Key sections to update:
 - **New job:** Add a `.timeline-item` block inside `#experience`
 - **New certification:** Add a `.cert-card` block inside `#certifications`
 - **New award/fellowship:** Add a `.award-card` block inside `#awards`
-- **Contact details:** Search for `medikargbo@gmail.com` or `mohamedlaminkargbo`
+- **Contact details:** Search for `email@gmail.com`
 
 ### Adding a Material Icon
 
