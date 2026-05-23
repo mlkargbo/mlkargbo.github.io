@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Lamin Kargbo — Data Architect &amp; Solutions Engineer</title>
+  <meta name="description" content="Portfolio of Mohamed Lamin Kargbo — Solutions Data Architect specializing in cloud data platforms, data governance, and AI-driven data engineering across Azure, Databricks, and AWS." />
+  <meta property="og:title" content="Mohamed Lamin Kargbo — Data Architect" />
+  <meta property="og:description" content="Designing scalable data architectures and governance frameworks for enterprise systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body) via Fontshare -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300,400,500,700,800&amp;f[]=satoshi@300,400,500,700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Google Material Symbols Rounded -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=block" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Favicon: inline SVG data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C4ED8'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='16' fill='white'%3EMK%3C/text%3E%3C/svg%3E" />
+
+  <script>
+    // Theme init before render to prevent flash
+    (function() {
+      var d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', d);
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     HEADER / NAV
+════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="nav__logo">
+        <!-- SVG Logo Mark -->
+        <svg class="nav__logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="9" fill="var(--color-primary)"/>
+          <!-- Stacked data bars — data engineering motif -->
+          <rect x="8" y="18" width="5" height="11" rx="1.5" fill="white" opacity="0.6"/>
+          <rect x="15" y="12" width="5" height="17" rx="1.5" fill="white" opacity="0.85"/>
+          <rect x="22" y="7" width="5" height="22" rx="1.5" fill="white"/>
+          <!-- Horizontal accent line -->
+          <line x1="8" y1="6" x2="28" y2="6" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+        <span class="nav__logo-text">
+          MLK
+          <span> Solutions Data Architect</span>
+        </span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Fellowships</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <!-- Sun icon (shown in light mode) -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="https://www.linkedin.com/in/mohamedlaminkargbo" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--nav-cta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          Connect
+        </a>
+        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" id="menu-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#awards">Fellowships &amp; Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<main>
+<section class="hero" id="home" aria-labelledby="hero-heading">
+  <!-- Background grid lines -->
+  <svg class="hero__bg-lines" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="0.75"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero__grid">
+      <!-- Left: copy -->
+      <div class="hero__content reveal">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+          Germany
+        </div>
+        <h1 class="hero__heading" id="hero-heading">
+          Building the
+          <em>data infrastructure</em>
+          that powers decisions.
+        </h1>
+        <p class="hero__sub">
+          Solutions Data Architect with 7+ years designing scalable data systems, governance frameworks, and cloud-native pipelines across enterprise environments — from Sierra Leone to Germany.
+        </p>
+        <div class="hero__cta">
+          <a href="#experience" class="btn btn--primary">View Experience</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__stats" aria-label="Key statistics">
+          <div>
+            <div class="hero__stat-number">8+</div>
+            <div class="hero__stat-label">Years in Data</div>
+          </div>
+          <div>
+            <div class="hero__stat-number">2</div>
+            <div class="hero__stat-label">Countries</div>
+          </div>
+          <div>
+            <div class="hero__stat-number">12+</div>
+            <div class="hero__stat-label">Training &amp; Certifications</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: profile card -->
+      <div class="hero__visual">
+        <div class="hero__card reveal" style="transition-delay:0.12s">
+          <img src="profile.jpg" alt="Mohamed Lamin Kargbo" class="profile-avatar profile-avatar--photo">
+          <div class="profile-name">Mohamed Lamin Kargbo</div>
+          <div class="profile-role">Data Manager · Rosenxt Group</div>
+          <div class="profile-tags" role="list">
+            <span class="tag tag--primary" role="listitem">Data Architecture</span>
+            <span class="tag tag--accent" role="listitem">Databricks</span>
+            <span class="tag" role="listitem">Azure</span>
+            <span class="tag" role="listitem">Data Governance</span>
+            <span class="tag" role="listitem">Data Quality</span>
+            <span class="tag" role="listitem">AWS</span>
+            <span class="tag tag--primary" role="listitem">ETL / ELT</span>
+            <span class="tag" role="listitem">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: text -->
+      <div class="reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-title" id="about-heading">Experienced in turning data complexity into clarity</h2>
+        <div class="about__location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Germany
+        </div>
+        <p class="section-body">
+          I am a versatile data management professional and cloud solutions architect with a strong research and development background. Skilled in managing complex datasets to support evidence-based decision-making across healthcare, energy, and pharmaceutical sectors.
+        </p>
+        <p class="section-body" style="margin-top: var(--space-4);">
+          My work spans the full data lifecycle — from designing enterprise-grade architectures and governance frameworks to building real-time pipelines and deploying machine learning infrastructure. I thrive at the intersection of technology and impact.
+        </p>
+        <div class="about__highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="highlight-title">Real-Time Data Pipelines</div>
+              <div class="highlight-text">Designing and deploying ETL/ELT workflows for machine learning models and analytics, integrating structured and unstructured data from diverse sources.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="highlight-title">Data Governance &amp; Quality</div>
+              <div class="highlight-text">Implementing Unity Catalog, DQX frameworks, and compliance controls to ensure data integrity at enterprise scale.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <div class="highlight-title">Cloud-Native Architecture</div>
+              <div class="highlight-text">Configuring and optimising Azure Databricks, AWS services, and hybrid cloud environments for scalable, secure data operations.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: focus card -->
+      <div class="about__visual-block reveal" style="transition-delay:0.1s">
+        <div class="about__photo-wrap reveal" style="transition-delay:0.06s">
+          <img src="profile.jpg" alt="Mohamed Lamin Kargbo" class="about__photo">
+          <div class="about__photo-caption">Mohamed Lamin Kargbo · Frankfurt, Germany</div>
+        </div>
+        <div class="about__focus-card">
+          <div class="section-label" style="margin-bottom:var(--space-2)">Core Domains</div>
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;margin-bottom:var(--space-2)">
+            A cross-sector practitioner bridging technical depth with strategic data leadership.
+          </p>
+          <div class="focus-grid">
+            <div class="focus-item">
+              <div class="focus-item__icon" aria-hidden="true"><span class="ms">architecture</span></div>
+              <div class="focus-item__label">Architecture</div>
+              <div class="focus-item__desc">Lakehouse, medallion, hybrid cloud</div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item__icon" aria-hidden="true"><span class="ms">settings</span></div>
+              <div class="focus-item__label">Engineering</div>
+              <div class="focus-item__desc">Spark, Python, ADF, DevOps CI/CD</div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item__icon" aria-hidden="true"><span class="ms">lock</span></div>
+              <div class="focus-item__label">Governance</div>
+              <div class="focus-item__desc">Unity Catalog, IAM, DQX, compliance</div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item__icon" aria-hidden="true"><span class="ms">smart_toy</span></div>
+              <div class="focus-item__label">AI Integration</div>
+              <div class="focus-item__desc">LLM pipelines, ML infrastructure</div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item__icon" aria-hidden="true"><span class="ms">bar_chart</span></div>
+              <div class="focus-item__label">Analytics</div>
+              <div class="focus-item__desc">Power BI, Tableau, KPI dashboards</div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item__icon" aria-hidden="true"><span class="ms">public</span></div>
+              <div class="focus-item__label">Impact</div>
+              <div class="focus-item__desc">Health informatics, global development</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════ -->
+<section id="experience" class="experience-bg" aria-labelledby="experience-heading">
+  <div class="container container--narrow">
+    <div class="reveal">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title" id="experience-heading">8+ years across two countries</h2>
+      <p class="section-body">From public health data in Sierra Leone to enterprise cloud architecture in Germany — a career built on precision, adaptability, and measurable impact.</p>
+    </div>
+
+    <div class="timeline" style="margin-top:var(--space-12)" role="list">
+
+      <!-- Rosenxt — Data Manager -->
+      <div class="timeline-item timeline-item--current reveal" style="transition-delay:0.05s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Mar 2025 – Present</span>
+          <span class="timeline-badge">Current</span>
+        </div>
+        <div class="timeline-role">Data Manager</div>
+        <div class="timeline-company">Rosenxt Group · Lingen, Germany</div>
+        <ul class="timeline-bullets">
+          <li>Overseeing end-to-end data quality management across enterprise systems, ensuring consistency and reliability at scale.</li>
+          <li>Designing and deploying data pipelines for machine learning models and analytics, integrating structured and unstructured data from diverse sources.</li>
+          <li>Providing tailored data solutions including data modelling, governance frameworks, and real-time insights to support strategic decision-making.</li>
+          <li>Configuring and administering Azure Databricks environments, optimising workflows for scalability and security.</li>
+        </ul>
+      </div>
+
+      <!-- Rosenxt — Data Processes Specialist -->
+      <div class="timeline-item reveal" style="transition-delay:0.08s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Dec 2024 – Mar 2025</span>
+        </div>
+        <div class="timeline-role">Data Processes &amp; Solutions Specialist</div>
+        <div class="timeline-company">Rosenxt Group · Lingen, Germany</div>
+        <ul class="timeline-bullets">
+          <li>Supported PoC evaluations of tools and technologies for data integration and analytics.</li>
+          <li>Developed data governance controls and quality assurance processes for enterprise data pipelines.</li>
+        </ul>
+      </div>
+
+      <!-- Merck KGaA -->
+      <div class="timeline-item reveal" style="transition-delay:0.11s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Jan 2023 – Jan 2024</span>
+        </div>
+        <div class="timeline-role">Data Architect</div>
+        <div class="timeline-company">Merck KGaA · Darmstadt, Germany</div>
+        <ul class="timeline-bullets">
+          <li>Designed and developed enterprise data architectures to support R&amp;D operations, leveraging AWS and Azure cloud platforms.</li>
+          <li>Developed and optimised ETL processes for transactional and analytical data systems, enhancing data accessibility for stakeholders.</li>
+          <li>Collaborated with cross-functional teams to implement scalable, secure cloud architectures and data pipelines for AI-driven applications.</li>
+          <li>Conducted data profiling, quality assessments, and compliance-focused integrity solutions.</li>
+        </ul>
+      </div>
+
+      <!-- Crown Agents -->
+      <div class="timeline-item reveal" style="transition-delay:0.14s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Jan 2022 – Dec 2022</span>
+        </div>
+        <div class="timeline-role">Data Manager</div>
+        <div class="timeline-company">Crown Agents International · Sierra Leone</div>
+        <ul class="timeline-bullets">
+          <li>Developed and managed data integration strategies for diverse datasets, optimising cloud infrastructure using AWS services.</li>
+          <li>Designed and implemented scalable ETL pipelines for cloud and on-premises environments, enhancing data flow efficiency.</li>
+          <li>Created interactive dashboards in Power BI and Tableau, enabling stakeholders to leverage real-time insights for decision-making.</li>
+        </ul>
+      </div>
+
+      <!-- ICAP Columbia -->
+      <div class="timeline-item reveal" style="transition-delay:0.17s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Jan 2019 – Jan 2022</span>
+        </div>
+        <div class="timeline-role">Data Officer / Analyst — ICAP &amp; CHAMPS Programme</div>
+        <div class="timeline-company">ICAP at Columbia University · Sierra Leone</div>
+        <ul class="timeline-bullets">
+          <li>Designed and maintained automated data pipelines for analysis and reporting, streamlining workflows and enhancing data accuracy.</li>
+          <li>Led data extraction, transformation, and loading processes, ensuring data availability for timely decision-making in global health programmes.</li>
+          <li>Developed data-driven KPI dashboards in Power BI supporting project progress monitoring and reporting.</li>
+        </ul>
+      </div>
+
+      <!-- World Vision -->
+      <div class="timeline-item reveal" style="transition-delay:0.2s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Jun 2018 – Jun 2019</span>
+        </div>
+        <div class="timeline-role">ICT MOTECH Site Data Analyst — EBOVAC Salone Trial</div>
+        <div class="timeline-company">World Vision · Sierra Leone</div>
+        <ul class="timeline-bullets">
+          <li>Managed data for an international Ebola vaccine clinical trial, ensuring data integrity and accuracy for research outcomes.</li>
+        </ul>
+      </div>
+
+      <!-- Electoral Commission -->
+      <div class="timeline-item reveal" style="transition-delay:0.23s" role="listitem">
+        <div class="timeline-meta">
+          <span class="timeline-date">Feb 2017 – Aug 2017 · Oct 2017 – Nov 2017 · Mar 2018 – Apr 2018</span>
+        </div>
+        <div class="timeline-role">District IT Focal Person &amp; Datacenter Supervisor &amp; Ward Coordinator</div>
+        <div class="timeline-company">Electoral Commission for Sierra Leone · Kambia District &amp; Freetown</div>
+        <ul class="timeline-bullets">
+          <li>Served as the principal ICT contact for Kambia District, overseeing technology deployment, voter registration systems, and data collection infrastructure across polling sites ahead of national elections.</li>
+          <li>Supervised datacenter operations in Freetown during the electoral results processing phase, ensuring secure handling, aggregation, and transmission of election data with zero tolerance for data loss or tampering.</li>
+          <li>Coordinated all electoral activities across the ward as Ward Coordinator, managing field teams, verifying voter registration data accuracy, and reporting results to district and national electoral authorities.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SKILLS
+════════════════════════════════════════ -->
+<section id="skills" aria-labelledby="skills-heading">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Skills &amp; Tools</div>
+      <h2 class="section-title" id="skills-heading">A full-stack data toolkit</h2>
+      <p class="section-body">From cloud infrastructure to machine learning pipelines — covering the complete data engineering and architecture stack.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal" style="transition-delay:0.05s">
+        <div class="skill-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+        </div>
+        <div class="skill-card__title">Cloud Platforms</div>
+        <div class="skill-pills" role="list">
+          <span class="skill-pill" role="listitem">Azure Databricks</span>
+          <span class="skill-pill" role="listitem">Azure Data Factory</span>
+          <span class="skill-pill" role="listitem">Azure DevOps</span>
+          <span class="skill-pill" role="listitem">AWS S3 / Glue</span>
+          <span class="skill-pill" role="listitem">Oracle Cloud</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:0.08s">
+        <div class="skill-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="skill-card__title">Languages &amp; Frameworks</div>
+        <div class="skill-pills" role="list">
+          <span class="skill-pill" role="listitem">Python</span>
+          <span class="skill-pill" role="listitem">SQL / NoSQL</span>
+          <span class="skill-pill" role="listitem">Apache Spark</span>
+          <span class="skill-pill" role="listitem">PySpark</span>
+          <span class="skill-pill" role="listitem">Streamlit</span>
+          <span class="skill-pill" role="listitem">Docker</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:0.11s">
+        <div class="skill-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="skill-card__title">Data Governance</div>
+        <div class="skill-pills" role="list">
+          <span class="skill-pill" role="listitem">Unity Catalog</span>
+          <span class="skill-pill" role="listitem">Databricks DQX</span>
+          <span class="skill-pill" role="listitem">Data Quality Assurance</span>
+          <span class="skill-pill" role="listitem">IAM &amp; Access Control</span>
+          <span class="skill-pill" role="listitem">Compliance Frameworks</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:0.14s">
+        <div class="skill-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="skill-card__title">Data Engineering</div>
+        <div class="skill-pills" role="list">
+          <span class="skill-pill" role="listitem">ETL / ELT Pipelines</span>
+          <span class="skill-pill" role="listitem">Data Modelling</span>
+          <span class="skill-pill" role="listitem">Lakehouse Architecture</span>
+          <span class="skill-pill" role="listitem">Medallion Pattern</span>
+          <span class="skill-pill" role="listitem">Database Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:0.17s">
+        <div class="skill-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="skill-card__title">Analytics &amp; BI</div>
+        <div class="skill-pills" role="list">
+          <span class="skill-pill" role="listitem">Power BI</span>
+          <span class="skill-pill" role="listitem">Tableau</span>
+          <span class="skill-pill" role="listitem">KPI Dashboards</span>
+          <span class="skill-pill" role="listitem">Data Profiling</span>
+          <span class="skill-pill" role="listitem">Statistical Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:0.2s">
+        <div class="skill-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <div class="skill-card__title">AI &amp; Machine Learning</div>
+        <div class="skill-pills" role="list">
+          <span class="skill-pill" role="listitem">Machine Learning Infra</span>
+          <span class="skill-pill" role="listitem">LLM Integration</span>
+          <span class="skill-pill" role="listitem">MLflow</span>
+          <span class="skill-pill" role="listitem">AI-Driven Pipelines</span>
+          <span class="skill-pill" role="listitem">Health Informatics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════════ -->
+<section id="certifications" aria-labelledby="certs-heading">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Certifications</div>
+      <h2 class="section-title" id="certs-heading">Validated expertise across the stack</h2>
+    </div>
+
+    <div class="certs-grid">
+      <div class="cert-card reveal" style="transition-delay:0.04s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">AWS Cloud Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.06s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Azure Fundamentals (AZ-900)</div>
+          <div class="cert-issuer">Microsoft Azure</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.08s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Databricks Platform Administrator</div>
+          <div class="cert-issuer">Databricks</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.1s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Databricks Lakehouse Fundamentals</div>
+          <div class="cert-issuer">Databricks</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.12s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Oracle Cloud Data Management 2023 Certified</div>
+          <div class="cert-issuer">Oracle — Foundations Associate</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.14s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Data Governance Certificate</div>
+          <div class="cert-issuer">Professional Certification</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.16s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Power BI Certificate</div>
+          <div class="cert-issuer">Microsoft Power BI</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.18s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Health Informatics Specialization (95/100)</div>
+          <div class="cert-issuer">Johns Hopkins University — Distinction</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.2s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Scrum Foundation Professional (SFPC)</div>
+          <div class="cert-issuer">CertiProf</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.22s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Advanced Databases and SQL Querying</div>
+          <div class="cert-issuer">Professional Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.24s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">Computer Security and Systems Management</div>
+          <div class="cert-issuer">Specialization Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card reveal" style="transition-delay:0.26s">
+        <div class="cert-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div>
+          <div class="cert-name">IT Project Management Certificate</div>
+          <div class="cert-issuer">Professional Certificate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     AWARDS / FELLOWSHIPS
+════════════════════════════════════════ -->
+<section id="awards" class="awards-bg" aria-labelledby="awards-heading">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Fellowships &amp; Recognition</div>
+      <h2 class="section-title" id="awards-heading">Selected for excellence</h2>
+      <p class="section-body">A record of recognition beyond technical credentials — leadership programmes, global ambassador roles, and fellowship selection among Africa's most promising young professionals.</p>
+    </div>
+
+    <div class="awards-grid">
+      <div class="award-card reveal" style="transition-delay:0.06s">
+        <div class="award-badge" aria-hidden="true"><span class="ms">public</span></div>
+        <div class="award-title">Afrika Kommt! Fellow — Cohort 11 (AK11)</div>
+        <div class="award-org">AFRIKA KOMMT! · Initiative of German Industries / GIZ</div>
+        <p class="award-desc">
+          Selected as the first Sierra Leonean to join Germany's prestigious bilateral exchange fellowship programme for Africa's most promising young leaders, hosted by Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ). Partnered with Merck KGaA in Healthcare, ICT, and Research sectors for a year-long management and leadership rotation.
+        </p>
+        <span class="award-year">2022 – 2024 · Alumni Member</span>
+      </div>
+
+      <div class="award-card reveal" style="transition-delay:0.1s">
+        <div class="award-badge" aria-hidden="true"><span class="ms">language</span></div>
+        <div class="award-title">One Young World Ambassador</div>
+        <div class="award-org">One Young World (OYW)</div>
+        <p class="award-desc">
+          Appointed Ambassador by One Young World — the global forum connecting young leaders with world heads of state, Nobel laureates, and senior business figures to drive lasting impact on urgent global challenges. OYW Ambassadors are recognised as outstanding change-makers in their fields.
+        </p>
+        <span class="award-year">October 2023 – Present</span>
+      </div>
+
+      <div class="award-card reveal" style="transition-delay:0.14s">
+        <div class="award-badge" aria-hidden="true"><span class="ms">psychology</span></div>
+        <div class="award-title">Perplexity Business Fellowship</div>
+        <div class="award-org">Perplexity AI</div>
+        <p class="award-desc">
+          Selected for Perplexity's exclusive Business Fellowship programme, focused on the frontier of AI-powered research, communication, and enterprise application. The programme develops applied AI skills in sustainability, DE&amp;I, and business strategy contexts.
+        </p>
+        <span class="award-year">2025</span>
+      </div>
+    </div>
+
+      <div class="award-card reveal" style="transition-delay:0.18s">
+        <div class="award-badge" aria-hidden="true"><span class="ms">star</span></div>
+        <div class="award-title">ForbesBLK Member</div>
+        <div class="award-org">Forbes · Community of Black entrepreneurs and professionals</div>
+        <p class="award-desc">
+          Member of Forbes' exclusive community celebrating Black entrepreneurship, leadership, and professional excellence across industries.
+        </p>
+        <span class="award-year">October 2023 – Present</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════ -->
+<section id="education" aria-labelledby="education-heading">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Education</div>
+      <h2 class="section-title" id="education-heading">Academic foundations</h2>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal" style="transition-delay:0.06s">
+        <div class="edu-icon" aria-hidden="true"><span class="ms">school</span></div>
+        <div>
+          <div class="edu-degree">MSc in Information Systems Management</div>
+          <div class="edu-school">The University of Salford</div>
+          <div class="edu-meta">Information Systems · 2027</div>
+          <div class="edu-distinction"><span class="ms">schedule</span> In Progress · Expected 2027</div>
+        </div>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.1s">
+        <div class="edu-icon" aria-hidden="true"><span class="ms">menu_book</span></div>
+        <div>
+          <div class="edu-degree">BSc Computer Engineering</div>
+          <div class="edu-school">Saint Monica University</div>
+          <div class="edu-meta">Computer Engineering · Cameroon · 2020</div>
+        </div>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.14s">
+        <div class="edu-icon" aria-hidden="true"><span class="ms">menu_book</span></div>
+        <div>
+          <div class="edu-degree">Associate Degree in Computer Science</div>
+          <div class="edu-school">Institute of Advanced Management and Technology - Now (UNIMTECH)</div>
+          <div class="edu-meta">Computer Science · Sierra Leone · 2015</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact" class="contact-bg" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left -->
+      <div class="reveal">
+        <div class="availability-badge">
+          <span class="availability-dot" aria-hidden="true"></span>
+          Open to opportunities
+        </div>
+        <div class="section-label">Contact</div>
+        <h2 class="section-title" id="contact-heading">Let's build something meaningful together</h2>
+        <p class="section-body">
+          Whether you're looking for a data architect, cloud solutions engineer, or a strategic partner to lead your data governance programme — I'd welcome a conversation.
+        </p>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/mohamedlaminkargbo" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <div class="contact-link__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-link__label">LinkedIn</div>
+              <div class="contact-link__value">linkedin.com/in/mohamedlaminkargbo</div>
+            </div>
+          </a>
+          <a href="mailto:medikargbo@gmail.com" class="contact-link">
+            <div class="contact-link__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-link__label">Email</div>
+              <div class="contact-link__value">medikargbo@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+4915734234568" class="contact-link">
+            <div class="contact-link__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.81a19.79 19.79 0 01-3.07-8.67A2 2 0 011.9 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-link__label">Phone</div>
+              <div class="contact-link__value">+49 157 342 34568</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: CTA card -->
+      <div class="reveal" style="transition-delay:0.1s">
+        <div class="contact-card">
+          <h3>Ready to connect?</h3>
+          <p>I'm based in Germany and available for full-time roles, consulting engagements, and speaking opportunities in data architecture, governance, and AI-driven systems.</p>
+          <a href="https://www.linkedin.com/in/mohamedlaminkargbo" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            Connect on LinkedIn
+          </a>
+          <a href="mailto:medikargbo@gmail.com" class="btn btn--ghost" style="margin-top:var(--space-3)">
+            Send an Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        © 2026 Mohamed Lamin Kargbo · Solutions Data Architect · Germany
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mohamedlaminkargbo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:medikargbo@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+(function () {
+  // ── Theme toggle ──────────────────────────────
+  var btn = document.querySelector('[data-theme-toggle]');
+  var html = document.documentElement;
+  var current = html.getAttribute('data-theme') || 'light';
+
+  function setTheme(t) {
+    current = t;
+    html.setAttribute('data-theme', t);
+    if (btn) {
+      btn.setAttribute('aria-label', 'Switch to ' + (t === 'dark' ? 'light' : 'dark') + ' mode');
+      btn.innerHTML = t === 'dark'
+        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    }
+  }
+  setTheme(current);
+  if (btn) btn.addEventListener('click', function () { setTheme(current === 'dark' ? 'light' : 'dark'); });
+
+  // ── Sticky header shadow ──────────────────────
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 8) header.classList.add('site-header--scrolled');
+    else header.classList.remove('site-header--scrolled');
+  }, { passive: true });
+
+  // ── Mobile menu ───────────────────────────────
+  var menuBtn = document.getElementById('menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      var open = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open.toString());
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ── Smooth scroll for anchor links ───────────
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── Scroll reveal ─────────────────────────────
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
