@@ -142,4 +142,4 @@ This portfolio is personal — all written content, professional history, and pe
 
 ---
 
-*Built with [Perplexity Computer](https://www.perplexity.ai) · May 2026*
+*Built with ❤️ · May 2026*
